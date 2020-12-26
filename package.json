@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "start": "tsc && node ./build/api.js",
-    "test": "tsc && jest",
+    "test": "jest",
     "coverage": "jest --colors --coverage"
   },
   "author": "",
