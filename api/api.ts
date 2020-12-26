@@ -10,7 +10,7 @@ const dbManager = new DBManager();
 
 /**
  * POST
- * http://localhost:1233/mutant 
+ * http://localhost:9000/mutant 
  * 
  * {
  *  "dna":["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
@@ -34,15 +34,14 @@ app.post('/mutant/', function (req: any, res: any) {
 });
 /**
  * GET
- * http://localhost:1233/stats 
+ * http://localhost:9000/stats 
  * 
  */
 app.get('/stats', async function (req, res) {
-    dbManager.readData().then((data: { Item: []; }) => {
-        res.status(200).json(dnaManager.getStats(data.Item));
-    })
+    let data = await dbManager.readData();
+    res.status(200).json(dnaManager.getStats(data.Items));
 });
 
-app.listen(1234, function () {
-    console.log('Listening on port 1233!');
+app.listen(9000, function () {
+    console.log('Listening on port 9000!');
 });

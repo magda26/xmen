@@ -41,14 +41,14 @@ export default class DBManager {
             TableName: this.tableName,
             Item: input
         };
-        return await docClient.put(params);
+        return await docClient.put(params, function(err:any, data:any) {});
     }
 
-    readData = () => {
+    readData = async () => {
         var params = {
             TableName: this.tableName
         };
-        return docClient.scan(params).promise();
+        return await docClient.scan(params).promise();
     }
 
 }
