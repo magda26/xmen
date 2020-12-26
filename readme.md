@@ -1,11 +1,11 @@
 # API 
 
 ## Code 
-`api.ts`: Main class
-`dnaManager.ts`: Manager for the dna process
-`dbManager.ts`: Manager for database
-`dnaManager.test.ts`: Tests for dnaManager
-`dbManager.test.ts`: Tests for dbManager
+`api.ts`: Main class <br />
+`dnaManager.ts`: Manager for the dna process <br />
+`dbManager.ts`: Manager for database <br />
+`dnaManager.test.ts`: Tests for dnaManager <br />
+`dbManager.test.ts`: Tests for dbManager <br />
     
 ## Installation
 This API requires node.js and npm, you can get both with the following commands:
